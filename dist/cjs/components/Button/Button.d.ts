@@ -1,6 +1,7 @@
-/// <reference types="react" />
+import React from "react";
+import "./Button.css";
 export interface ButtonProps {
     label: string;
 }
-declare const Button: (props: ButtonProps) => JSX.Element;
+declare const Button: React.FC<ButtonProps>;
 export default Button;

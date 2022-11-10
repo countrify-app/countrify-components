@@ -1,0 +1,13 @@
+import mainLogo from "../../style/logo.png";
+import { Meta, Story } from "@storybook/addon-docs";
+
+<Meta title="Styles/Logo" />
+
+export const image = {
+  src: mainLogo,
+  alt: "my image",
+};
+
+<Story name="logo">
+  <img src={image.src} alt={image.alt} />;
+</Story>

@@ -14,13 +14,21 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: "primary",
-  kind: "blue"
+  kind: "blue",
 };
+
+export const Small = Template.bind({});
+Small.args = {
+  label: "small",
+  kind: "blue",
+  size: "small"
+};
+
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "secondary",
-  kind: "darkblue"
+  kind: "lightBlue"
 };
 
 export const Danger = Template.bind({});
@@ -29,8 +37,26 @@ Danger.args = {
   kind: "red"
 };
 
+export const DangerLight = Template.bind({});
+DangerLight.args = {
+  label: "dangerLight",
+  kind: "lightRed"
+};
+
 export const Valid = Template.bind({});
 Valid.args = {
   label: "valid",
   kind: "green"
+};
+
+export const Alert = Template.bind({});
+Alert.args = {
+  label: "alert",
+  kind: "yellow"
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  label: "default",
+  kind: "grey"
 };

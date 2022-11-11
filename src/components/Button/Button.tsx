@@ -1,15 +1,22 @@
 import React from "react";
-import { color } from "../../_utils/branding";
 import "./Button.scss";
 import "../../style/globals.scss";
 
+const arrayOfColors = ["lightBlue", "blue", "darkBlue", "green", "red", "lightRed", "yellow", "grey", "lightGrey", "white" ] as const
+type Colors = typeof arrayOfColors;
+
+const arrayOfSize = ["small", "large" ] as const
+type Sizes = typeof arrayOfSize;
+
 export interface ButtonProps {
   label: string;
-  kind: string;
+  kind: Colors[number];
+  className: string;
+  size: Sizes[number]
 }
 
-const Button: React.FC<ButtonProps> = ({ label, kind }) => {
-  return <button className={kind.toLowerCase()}>{label}</button>;
+const Button: React.FC<ButtonProps> = ({ label, kind, className, size }) => {
+  return <button className={`${kind.toLowerCase()} ${className} ${size}`}>{label}</button>;
 };
 
 export default Button;

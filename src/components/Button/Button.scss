@@ -1,0 +1,72 @@
+button {
+  font-size: 15px;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  max-width: 100%;
+  overflow: hidden;
+  user-select: none;
+  align-items: center;
+  white-space: nowrap;
+  color: white;
+  font-family: Karla;
+  &:hover{
+    filter: drop-shadow(1px 1px 0px black) saturate(0.75);
+    
+  }
+}
+
+.lightblue {
+  background-color: var(--lightblue);
+  color: black
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.darkblue {
+  background-color: var(--darkblue);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.lightred {
+  background-color: var(--lightred);
+  color: black
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.grey {
+  background-color: var(--grey);
+}
+
+.lightgrey {
+  background-color: var(--lightgrey);
+  color: black
+}
+
+.white {
+  background-color: var(--white);
+}
+
+.small {
+  font-size: 10px;
+}

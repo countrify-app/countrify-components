@@ -11,13 +11,26 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: "Hello world!",
+export const Primary = Template.bind({});
+Primary.args = {
+  label: "primary",
+  kind: "blue"
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  label: "Click me!",
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: "secondary",
+  kind: "darkblue"
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  label: "danger",
+  kind: "red"
+};
+
+export const Valid = Template.bind({});
+Valid.args = {
+  label: "valid",
+  kind: "green"
 };

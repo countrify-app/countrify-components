@@ -1,5 +1,6 @@
-import mainLogo from "../../style/logo.png";
+import mainLogo from "../../style/logo/logo.png";
 import { Meta, Story } from "@storybook/addon-docs";
+import "./Logo.scss";
 
 <Meta title="Styles/Logo" />
 
@@ -8,6 +9,8 @@ export const image = {
   alt: "my image",
 };
 
-<Story name="logo">
+<Story name="Countrify">
   <img src={image.src} alt={image.alt} />;
+  <p><a href= "../../style/logo/logo.png" target="_blank">Logo</a> - <a href= "../../style/logo/logo@0,75x.png" target="_blank">75%</a> - <a href= "../../style/logo/logo@0,5x.png" target="_blank">50%</a> - <a href= "../../style/logo/logo@0,33x.png" target="_blank">33%</a> - <a href= "../../style/logo/logo@0,25x.png" target="_blank">25%</a></p>
 </Story>
+

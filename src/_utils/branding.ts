@@ -2,9 +2,9 @@ interface Color {
   [propName: string]: string
 }
 
-
 export const color: Color = {
   lightBlue: '#E6F7FE',
+  blue: '#00AFF5',
   darkBlue: '#022B3A',
   green: '#04A777',
   red: '#EE4266',
@@ -47,10 +47,6 @@ export const font: Font = {
   xl: {
     size: '30px',
     lineHeight: String(Math.floor((32 / 30) * 100) / 100),
-  },
-  brand: {
-    size: '56px',
-    lineHeight: '56px',
   },
   xxl: {
     size: '82px',

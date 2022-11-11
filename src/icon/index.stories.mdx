@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, IconGallery, IconItem, Meta } from '@storybook/addon-docs/blocks'
+import { BaseIcon } from '../_utils/icon/BaseIcon'
+import * as allIcons from './index.tsx'
+import './index.scss'
+
+<Meta title="Styles/Icons" />
+
+# ** Icons **
+
+<Canvas>
+  <IconGallery>
+    {Object.entries(allIcons).map(([name, Component]) => (
+      <IconItem name={name}>
+        <Component />
+      </IconItem>
+    ))}
+  </IconGallery>
+</Canvas>
+
+## Usage
+
+```js
+import { Alarm } from '@countrify-app/countrify-components/icons/Alarm'
+;<Alarm />
+```
+## Props
+
+<ArgsTable of={BaseIcon} />

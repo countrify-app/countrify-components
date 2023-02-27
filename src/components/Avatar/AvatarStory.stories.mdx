@@ -1,0 +1,12 @@
+import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs'
+import { AvatarStory } from './AvatarStory.stories.tsx'
+import { Avatar } from './Avatar'
+
+<Meta component={Avatar} title="Avatar" />
+
+<Canvas withSource="open">
+  <Story story={AvatarStory} />
+</Canvas>
+
+
+<ArgsTable of={Avatar} story={PRIMARY_STORY} />

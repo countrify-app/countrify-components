@@ -5,6 +5,6 @@ import Logo from "./Logo";
 
 describe("Logo", () => {
   test("renders the Logo component", () => {
-    render(<Logo />);
+    render(<Logo src="../../style/logo/logo.png" alt="logo"/>);
   });
 });

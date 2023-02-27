@@ -1,0 +1,38 @@
+.loading {
+  display: inline-block;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 4px solid var(--blue);
+  border-color: var(--blue) transparent var(--blue) transparent;
+  animation: loading 1.2s linear infinite;
+}
+.regular {
+  width: 80px;
+  height: 80px;
+}
+.regular:after {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+}
+.small {
+  width: 30px;
+  height: 30px;
+}
+.small:after {
+  width: 26px;
+  height: 26px;
+  margin: 3px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import "./Button.scss";
-const logo = require('../../style/logo/logo.png')
+import "./Logo.css";
 
-const image = {
-  src: logo,
-  alt: 'countrify logo',
-};
+export interface LogoProps {
+  src: string;
+  alt: string;
+}
 
-const Logo = () => <img src={image.src} alt={image.alt} />;
+const Logo: React.FC<LogoProps> = ({ src, alt }) => <img src={src} alt={alt} />;
 
 export default Logo

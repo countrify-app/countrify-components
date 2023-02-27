@@ -18,10 +18,10 @@ button {
   white-space: nowrap;
   color: white;
   font-family: Karla;
-  &:hover{
+}
+
+button:hover {
     filter: drop-shadow(1px 1px 0px black) saturate(0.75);
-    
-  }
 }
 
 .lightblue {

@@ -1,0 +1,23 @@
+div {
+  background-color: white ;
+  font-family: Karla;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--blue)
+}
+
+a:active {
+  color: var(--blue);
+  filter: brightness(0.7)
+}
+
+a:hover {
+  text-decoration: underline;
+  filter: brightness(0.7)
+}

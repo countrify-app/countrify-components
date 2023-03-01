@@ -1,19 +1,37 @@
 import React from "react";
-import "./Link.css";
+import styled from "styled-components";
 import "../../style/globals.css";
 
-export interface LinkProps {
-  children: string;
+interface LinkProps {
+  children?: React.ReactNode;
   href: string;
-  className?: string;
 }
 
-const Button: React.FC<LinkProps> = ({ children, href, className }) => {
+const LinkContainer = styled.a<LinkProps>`
+  font-family: Karla;
+  color: var(--blue);
+  text-decoration: none;
+  :visited {
+    color: var(--blue)
+  }
+  :active {
+    color: var(--blue);
+    filter: brightness(0.7)
+  }
+  :hover {
+    cursor: pointer
+    text-decoration: underline;
+    filter: brightness(0.7)
+  }
+`;
+
+
+export const Link = ({ children, href }: LinkProps) => {
   return (
-    <div className={className}>
-      <a href={href}>{children}</a>
-    </div>
+      <LinkContainer href={href}>{children}</LinkContainer>
   );
 };
 
-export default Button;
+Link.displayName = "Link";
+
+export default Link;

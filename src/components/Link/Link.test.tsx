@@ -4,6 +4,6 @@ import Link from "./Link";
 
 describe("Link", () => {
   test("renders the Link component", () => {
-    render(<Link href="www.google.fr" children="this link"/>);
+    render(<Link href="www.google.fr">This is a link</Link>);
   });
 });

@@ -1,0 +1,13 @@
+import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs'
+import { LinkStory } from './LinkStory.stories.tsx'
+import { Link } from './Link'
+
+<Meta component={Link} title="Link" />
+
+<Canvas withSource="open">
+  <Story story={LinkStory} />
+</Canvas>
+
+
+<ArgsTable of={Link} story={PRIMARY_STORY} />
+

@@ -11,4 +11,4 @@ AvatarStory.args = {
   children: 'OA'
 }
 
-AvatarStory.storyName = 'MyComponent'
+AvatarStory.storyName = 'Avatar'

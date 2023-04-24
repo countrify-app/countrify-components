@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import "../../style/globals.css";
 
-interface LinkProps {
+interface CardProps {
   children?: React.ReactNode;
   href: string;
 }
 
-const LinkContainer = styled.a<LinkProps>`
+const CardContainer = styled.a<CardProps>`
   font-family: Karla;
   color: var(--blue);
   text-decoration: none;
@@ -26,12 +26,12 @@ const LinkContainer = styled.a<LinkProps>`
 `;
 
 
-export const Link = ({ children, href }: LinkProps) => {
+export const Card = ({ children, href }: CardProps) => {
   return (
-    <LinkContainer href={href}>{children}</LinkContainer>
+    <CardContainer href={href}>{children}</CardContainer>
   );
 };
 
-Link.displayName = "Link";
+Card.displayName = "Card";
 
-export default Link;
+export default Card;

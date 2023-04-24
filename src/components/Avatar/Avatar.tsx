@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 export interface AvatarProps {
   children?: React.ReactNode;
   size?: 'small' | 'medium' | 'large'
-
 }
 
 const AvatarContainer = styled.div<AvatarProps>`

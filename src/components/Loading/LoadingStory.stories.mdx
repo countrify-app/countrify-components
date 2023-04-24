@@ -1,0 +1,13 @@
+import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs'
+import { LoadingStory } from './LoadingStory.stories.tsx'
+import { Loading } from './Loading'
+
+<Meta component={Loading} title="Loading" />
+
+<Canvas withSource="open">
+  <Story story={LoadingStory} />
+</Canvas>
+
+
+<ArgsTable of={Loading} story={PRIMARY_STORY} />
+

@@ -11,7 +11,7 @@ interface ButtonProps {
   kind: Colors;
 }
 
-const ButtonContainer = styled.button<ButtonProps>`
+const StyledButton = styled.button<ButtonProps>`
   font-size: ${({ size }) => (size === "small" ? "10px" : "15px")};
   background-color: ${({ kind }) => color[kind]};
   position: relative;
@@ -39,9 +39,9 @@ const ButtonContainer = styled.button<ButtonProps>`
 
 export const Button = ({ children, size, kind }: ButtonProps) => {
   return (
-    <ButtonContainer size={size} kind={kind}>
+    <StyledButton size={size} kind={kind}>
       {children}
-    </ButtonContainer>
+    </StyledButton>
   );
 };
 

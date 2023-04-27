@@ -5,7 +5,7 @@ export interface LoadingProps {
   size?: "small" | "regular";
 }
 
-const LoadingProps = styled.div<LoadingProps>`
+const StyledLoading = styled.div<LoadingProps>`
   display: inline-block;
   width: ${({ size }) => (size === "small" ? "30px" : "80px")};
   height: ${({ size }) => (size === "small" ? "30px" : "80px")};
@@ -32,7 +32,7 @@ const LoadingProps = styled.div<LoadingProps>`
 `;
 
 const Loading: React.FC<LoadingProps> = ({ size }) => {
-  return <LoadingProps size={size} />;
+  return <StyledLoading size={size} />;
 };
 
 export default Loading;

@@ -6,7 +6,7 @@ export interface AvatarProps {
   size?: 'small' | 'medium' | 'large'
 }
 
-const AvatarContainer = styled.div<AvatarProps>`
+const StyledAvatar = styled.div<AvatarProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,8 +32,8 @@ const AvatarContainer = styled.div<AvatarProps>`
   }}
 `;
 export const Avatar = ({ children, size }: AvatarProps) => {
-  return <AvatarContainer size={size}>
-  {children}</AvatarContainer>;
+  return <StyledAvatar size={size}>
+  {children}</StyledAvatar>;
 };
 
 Avatar.displayName = "Avatar";

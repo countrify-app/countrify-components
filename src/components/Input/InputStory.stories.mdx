@@ -1,0 +1,167 @@
+import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs';
+import { InputStory } from './InputStory.stories.tsx';
+import Input, { InputProps } from './Input';
+
+export default {
+  title: 'Components/Input',
+  component: Input,
+  argTypes: {
+    type: {
+      control: {
+        type: 'select',
+        options: [
+          'text',
+          'password',
+          'number',
+          'email',
+          'tel',
+          'checkbox',
+          'radio',
+          'date',
+          'time',
+          'file',
+          'range',
+          'search',
+          'color',
+          'datetime-local',
+          'month',
+          'week',
+        ],
+      },
+      description: 'The type of the input element',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'text' },
+      },
+    },
+    name: {
+      control: 'text',
+      description: 'The name of the input element',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    value: {
+      control: 'text',
+      description: 'The value of the input element',
+      table: {
+        type: { summary: 'string | number' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    placeholder: {
+      control: 'text',
+      description: 'The placeholder text of the input element',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    onChange: {
+      control: null,
+      description: 'Function to be called when the input value changes',
+      table: {
+        type: { summary: 'function' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    checked: {
+      control: 'boolean',
+      description: 'Whether the input element is checked or not (for type checkbox and radio)',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Whether the input element is disabled or not',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+    required: {
+      control: 'boolean',
+      description: 'Whether the input element is required or not',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+    autoFocus: {
+      control: 'boolean',
+      description: 'Whether the input element should be focused automatically on page load',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+    min: {
+      control: 'number',
+      description: 'The minimum value of the input element (for type number)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    max: {
+      control: 'number',
+      description: 'The maximum value of the input element (for type number)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    minLength: {
+      control: 'number',
+      description: 'The minimum length of the input element (for type text and password)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '-'},
+      },
+    },
+    maxLength: {
+      control: 'number',
+      description: 'The maximum length of the input element (for type text and password)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    pattern: {
+      control: 'text',
+      description: 'The regex pattern that the input value must match (for type text, password, email and search)',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' },
+      },
+    },
+    step: {
+      control: 'number',
+      description: 'The legal number intervals for the input element (for type number)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '-' },
+      },
+    },
+  },
+} as Meta;
+
+export const Basic: Story<InputProps> = (args) => <Input {...args} />;
+Basic.args = {
+  type: 'text',
+  name: 'username',
+  value: '',
+  placeholder: 'Enter your username',
+  disabled: false,
+};
+
+<Meta component={Input} title="Input" />
+
+<Canvas withSource="open">
+  <Story story={InputStory} />
+</Canvas>
+
+<ArgsTable of={Input} story={PRIMARY_STORY} />

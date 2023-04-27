@@ -7,7 +7,7 @@ interface LinkProps {
   href: string;
 }
 
-const LinkContainer = styled.a<LinkProps>`
+const StyledLink = styled.a<LinkProps>`
   font-family: Karla;
   color: var(--blue);
   text-decoration: none;
@@ -28,7 +28,7 @@ const LinkContainer = styled.a<LinkProps>`
 
 export const Link = ({ children, href }: LinkProps) => {
   return (
-    <LinkContainer href={href}>{children}</LinkContainer>
+    <StyledLink href={href}>{children}</StyledLink>
   );
 };
 

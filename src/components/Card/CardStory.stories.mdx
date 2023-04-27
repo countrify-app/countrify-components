@@ -1,6 +1,6 @@
-import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs'
-import { CardStory } from './CardStory.stories.tsx'
-import { Card } from './Card'
+import { ArgsTable, Canvas, Meta, Story, PRIMARY_STORY } from '@storybook/addon-docs';
+import { CardStory } from './CardStory.stories.tsx';
+import Card from './Card';
 
 <Meta component={Card} title="Card" />
 
@@ -8,6 +8,4 @@ import { Card } from './Card'
   <Story story={CardStory} />
 </Canvas>
 
-
 <ArgsTable of={Card} story={PRIMARY_STORY} />
-

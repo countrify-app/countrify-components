@@ -8,7 +8,7 @@ export const InputStory: ComponentStory<typeof Input> = (args: InputProps) => {
 
 InputStory.args = {
   type: 'date',
-  name: 'input',
+  name: '',
   value: '',
   placeholder: 'Enter your input',
   disabled: false,

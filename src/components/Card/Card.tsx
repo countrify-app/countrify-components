@@ -6,7 +6,7 @@ const StyledCard = styled.div`
 `;
 
 interface CardProps {
-  // props here
+  size?: "small" | "large";
 }
 
 const Card: React.FC<CardProps> = () => {
